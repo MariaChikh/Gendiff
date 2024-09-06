@@ -23,5 +23,5 @@ def generate_diff(file_path1, file_path2):
 
     sorted_diff = dict(sorted(diff.items()))
     result = '{\n' +'\n'.join(sorted_diff.values())+'\n}'
-    return result
+    return result.lower()
 
