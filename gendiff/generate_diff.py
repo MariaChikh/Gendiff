@@ -22,6 +22,5 @@ def generate_diff(file_path1, file_path2):
             diff[key] = f"    {key}: {file1[key]}"
 
     sorted_diff = dict(sorted(diff.items()))
-    result = '{\n' +'\n'.join(sorted_diff.values())+'\n}\n'
+    result = '{\n' + '\n'.join(sorted_diff.values()) + '\n}\n'
     return result.lower()
-
