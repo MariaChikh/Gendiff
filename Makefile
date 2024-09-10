@@ -18,3 +18,6 @@ lint:
 
 test-coverage:
 	poetry run pytest --cov=python-project-50 --cov-report xml
+
+test:
+	poetry run pytest
