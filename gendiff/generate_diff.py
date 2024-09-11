@@ -1,6 +1,5 @@
-import json
-import yaml
 from gendiff.parser import parser
+
 
 def generate_diff(file_path1, file_path2):
     file1 = parser(file_path1)
