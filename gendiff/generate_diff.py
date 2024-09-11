@@ -1,9 +1,10 @@
 import json
-
+import yaml
+from gendiff.parser import parser
 
 def generate_diff(file_path1, file_path2):
-    file1 = json.load(open(file_path1))
-    file2 = json.load(open(file_path2))
+    file1 = parser(file_path1)
+    file2 = parser(file_path2)
     union_keys = set(file1.keys()).union(file2.keys())
 
     diff = {}
