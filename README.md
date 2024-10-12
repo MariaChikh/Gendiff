@@ -10,3 +10,5 @@
 How it works:
 
 [![asciicast](https://asciinema.org/a/YYcms1mAnpB120WXLK1K5tuhQ.svg)](https://asciinema.org/a/YYcms1mAnpB120WXLK1K5tuhQ)
+
+[![asciicast](https://asciinema.org/a/hvpR8g0d8HdNp5E6nujktr3VZ.svg)](https://asciinema.org/a/hvpR8g0d8HdNp5E6nujktr3VZ)

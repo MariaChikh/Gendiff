@@ -1,26 +1,12 @@
 from gendiff.parser import parser
+from gendiff.build_diff import build_diff
+from gendiff.formatters.stylish import stylish
 
 
-def generate_diff(file_path1, file_path2):
+def generate_diff(file_path1, file_path2, format_name = 'stylish'):
     file1 = parser(file_path1)
     file2 = parser(file_path2)
-    union_keys = set(file1.keys()).union(file2.keys())
+    diff = build_diff(file1, file2)
+    format_diff = stylish(diff)
+    return format_diff
 
-    diff = {}
-    for key in union_keys:
-
-        if key in file1 and key not in file2:
-            diff[key] = f"  - {key}: {file1[key]}"
-
-        elif key not in file1 and key in file2:
-            diff[key] = f"  + {key}: {file2[key]}"
-
-        elif file1[key] != file2[key]:
-            diff[key] = f"  - {key}: {file1[key]}\n  + {key}: {file2[key]}"
-
-        else:
-            diff[key] = f"    {key}: {file1[key]}"
-
-    sorted_diff = dict(sorted(diff.items()))
-    result = '{\n' + '\n'.join(sorted_diff.values()) + '\n}\n'
-    return result.lower()
