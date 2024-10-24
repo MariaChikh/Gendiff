@@ -22,7 +22,7 @@ def make_lines(data, path=''):
         formated_value = format_value(value[0])
         if type == 'added':
             lines.append(f"Property '{property}'"
-                         f"was added with value: {formated_value}")
+                         f" was added with value: {formated_value}")
         elif type == 'removed':
             lines.append(f"Property '{property}' was removed")
         elif type == 'changed':
