@@ -8,7 +8,9 @@ from gendiff.generate_diff import generate_diff
     ('tests/fixtures/file1_tree.json', 'tests/fixtures/file2_tree.json', 'stylish', 'tests/fixtures/expected_tree.txt'),
     ('tests/fixtures/file1_tree.yaml', 'tests/fixtures/file2_tree.yaml', 'stylish', 'tests/fixtures/expected_tree.txt'),
     ('tests/fixtures/file1_tree.json', 'tests/fixtures/file2_tree.json', 'plain', 'tests/fixtures/expected_plain.txt'),
-    ('tests/fixtures/file1_tree.yaml', 'tests/fixtures/file2_tree.yaml', 'plain', 'tests/fixtures/expected_plain.txt')
+    ('tests/fixtures/file1_tree.yaml', 'tests/fixtures/file2_tree.yaml', 'plain', 'tests/fixtures/expected_plain.txt'),
+    ('tests/fixtures/file1_tree.json', 'tests/fixtures/file2_tree.json', 'json', 'tests/fixtures/expected_json.txt'),
+    ('tests/fixtures/file1_tree.yaml', 'tests/fixtures/file2_tree.yaml', 'json', 'tests/fixtures/expected_json.txt')
     ]
 )
 

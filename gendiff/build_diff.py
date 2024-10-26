@@ -18,4 +18,4 @@ def build_diff(tree1, tree2):
         else:
             diff[key] = ('changed', tree1[key], tree2[key])
 
-    return diff
+    return dict(sorted(diff.items()))

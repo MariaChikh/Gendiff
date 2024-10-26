@@ -16,3 +16,5 @@ How it works:
 [![asciicast](https://asciinema.org/a/AarLLQMvkb5uvMHn13opZOYqh.svg)](https://asciinema.org/a/AarLLQMvkb5uvMHn13opZOYqh)
 
 [![asciicast](https://asciinema.org/a/mBYJp9CJTJ6z9HZQhRZn7GziY.svg)](https://asciinema.org/a/mBYJp9CJTJ6z9HZQhRZn7GziY)
+
+[![asciicast](https://asciinema.org/a/6QXjceor5YUbu2TbiFZBNqZtg.svg)](https://asciinema.org/a/6QXjceor5YUbu2TbiFZBNqZtg)
