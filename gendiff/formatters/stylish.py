@@ -63,6 +63,6 @@ def formate_lines(depth, prefix, key, value, lines):
 def format_changed_data(depth, key, value, lines):
     old_value, new_value = value
     indent = ' ' * (DEFAULT_INDENT * depth - 2)
-    lines.append(f'{indent}- {key}: {format_value(old_value, depth+1)}'
-                 f'\n{indent}+ {key}: {format_value(new_value, depth+1)}')
+    lines.append(f'{indent}- {key}: {format_value(old_value, depth + 1)}'
+                 f'\n{indent}+ {key}: {format_value(new_value, depth + 1)}')
     return lines

@@ -11,16 +11,10 @@ from gendiff.generate_diff import generate_diff
     ('tests/fixtures/file1_tree.yaml', 'tests/fixtures/file2_tree.yaml', 'plain', 'tests/fixtures/expected_plain.txt'),
     ('tests/fixtures/file1_tree.json', 'tests/fixtures/file2_tree.json', 'json', 'tests/fixtures/expected_json.txt'),
     ('tests/fixtures/file1_tree.yaml', 'tests/fixtures/file2_tree.yaml', 'json', 'tests/fixtures/expected_json.txt')
-    ]
+]
 )
-
 def test_gendiff(file1, file2, formatter, expected):
     diff = generate_diff(file1, file2, formatter)
-    with  open(expected, 'r') as file:
+    with open(expected, 'r') as file:
         expected = file.read()
-    assert  diff == expected
-
-    
-
-
-
+    assert diff == expected
