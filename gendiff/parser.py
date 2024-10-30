@@ -4,7 +4,8 @@ import yaml
 
 def parser(file):
     if file.endswith('.json'):
-        new_file = json.load(open(file))
+        with open(file) as new_file:
+            return json.load(new_file)
     elif file.endswith('.yaml') or file.endswith('.yml'):
-        new_file = yaml.safe_load(open(file))
-    return new_file
+        with open(file) as new_file:
+            return yaml.safe_load(new_file)

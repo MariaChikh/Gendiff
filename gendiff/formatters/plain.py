@@ -17,20 +17,20 @@ def format_value(value):
 def make_lines(data, path=''):
     lines = []
     sorted_data = sorted(data.items())
-    for key, (type, *value) in sorted_data:
-        property = f'{path}{key}'
+    for key, (node_type, *value) in sorted_data:
+        item = f'{path}{key}'
         formated_value = format_value(value[0])
-        if type == 'added':
-            lines.append(f"Property '{property}'"
+        if node_type == 'added':
+            lines.append(f"Property '{item}'"
                          f" was added with value: {formated_value}")
-        elif type == 'removed':
-            lines.append(f"Property '{property}' was removed")
-        elif type == 'changed':
+        elif node_type == 'removed':
+            lines.append(f"Property '{item}' was removed")
+        elif node_type == 'changed':
             old_value, new_value = value
-            lines.append(f"Property '{property}' was updated."
+            lines.append(f"Property '{item}' was updated."
                          f" From {format_value(old_value)}"
                          f" to {format_value(new_value)}")
-        elif type == 'nested':
-            nested_value = make_lines(value[0], f'{property}.')
+        elif node_type == 'nested':
+            nested_value = make_lines(value[0], f'{item}.')
             lines.append(nested_value)
     return '\n'.join(lines)
