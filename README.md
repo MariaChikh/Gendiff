@@ -24,6 +24,7 @@ cd gendiff
 poetry install
 
 ## Usage:
+
 To find differences between two files:
 
 gendiff <file_path1><file_path2>
