@@ -10,8 +10,10 @@ def format_value(value):
         return str(value).lower()
     elif value is None:
         return 'null'
-    elif isinstance(value, str) or isinstance(value, int):
+    elif isinstance(value, str):
         return f"'{value}'"
+    elif isinstance(value, int):
+        return str(value)
 
 
 def make_lines(data, path=''):
