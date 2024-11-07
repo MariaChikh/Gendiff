@@ -12,7 +12,7 @@ def build_tree(data, depth=1):
     for key, (node_type, *value) in sorted_data:
         lines.append(make_lines(key, value, node_type, depth))
     return '\n'.join(lines)
-    
+
 
 def make_lines(key, value, node_type, depth):
     prefix = '  '
@@ -30,7 +30,7 @@ def make_lines(key, value, node_type, depth):
         indent = ' ' * (DEFAULT_INDENT * depth - 2)
         children = build_tree(value[0], depth + 1)
         formated_value = f'{{\n{children}\n{indent}  }}'
-        return format_value(formated_value, depth)
+        return format_lines(depth, prefix, key, formated_value)
 
 
 def format_value(value, depth):
@@ -51,15 +51,13 @@ def format_value(value, depth):
 
 
 def format_lines(depth, prefix, key, value):
-    
     formated_value = format_value(value, depth + 1)
     indent = ' ' * (DEFAULT_INDENT * depth - 2)
     return (f'{indent}{prefix}{key}: {formated_value}')
-    
+
 
 def format_changed_data(depth, key, value):
-    
     old_value, new_value = value
     indent = ' ' * (DEFAULT_INDENT * depth - 2)
     return (f'{indent}- {key}: {format_value(old_value, depth + 1)}'
-                 f'\n{indent}+ {key}: {format_value(new_value, depth + 1)}')
+            f'\n{indent}+ {key}: {format_value(new_value, depth + 1)}')
